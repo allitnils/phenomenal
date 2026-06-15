@@ -11,16 +11,20 @@ const http = require('http');
 let server;
 let baseUrl;
 
-before((done) => {
-  server = http.createServer(app);
-  server.listen(0, '127.0.0.1', () => {
-    baseUrl = `http://127.0.0.1:${server.address().port}`;
-    done();
+before(async () => {
+  await new Promise((resolve) => {
+    server = http.createServer(app);
+    server.listen(0, '127.0.0.1', () => {
+      baseUrl = `http://127.0.0.1:${server.address().port}`;
+      resolve();
+    });
   });
 });
 
-after((done) => {
-  server.close(done);
+after(async () => {
+  await new Promise((resolve) => {
+    server.close(() => resolve());
+  });
 });
 
 async function req(method, path, body) {
