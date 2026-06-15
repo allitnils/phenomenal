@@ -106,11 +106,33 @@ function renderHelp() {
         </ul>
       `)}
 
-      <div style="margin-top:32px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:13px;color:var(--muted)">
-        <strong style="color:var(--text)">About phenomenal</strong><br>
-        Built for qualitative researchers using grounded theory, thematic analysis, or interpretive phenomenological analysis.
-        Self-hosted: your data stays on your server. No accounts, no cloud sync, no usage limits.
-        Source: <a href="https://github.com/allitnils/phenomenal" style="color:var(--accent)">github.com/allitnils/phenomenal</a>
+      <div style="margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--border);border-radius:8px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:13px;font-weight:600;margin-bottom:4px">About phenomenal</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.65;max-width:480px">
+            Built for qualitative researchers using grounded theory, thematic analysis, or IPA.
+            Self-hosted — your data stays on your server. No accounts, no cloud sync, no usage limits.
+          </div>
+          <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="https://github.com/allitnils/phenomenal" target="_blank" rel="noopener"
+               style="font-size:12px;color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:4px">
+              ⌥ Source on GitHub
+            </a>
+          </div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em">Built by</div>
+          <a href="https://ivanocampo.com" target="_blank" rel="noopener"
+             style="font-size:15px;font-weight:700;color:var(--accent);text-decoration:none;font-family:'Fira Code',monospace;display:block;margin-bottom:8px">
+            Ivan Ocampo
+          </a>
+          <a href="mailto:ivan@ivanocampo.com?subject=phenomenal%20feedback"
+             style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);text-decoration:none;padding:6px 12px;border:1px solid var(--border);border-radius:5px;transition:all 0.15s"
+             onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--text)'"
+             onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">
+            ✉ Send feedback
+          </a>
+        </div>
       </div>
 
     </div>
