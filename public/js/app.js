@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     coding: renderCoding,
     graph: renderGraph,
     memos: renderMemos,
+    help: renderHelp,
   };
 
   initSidebar((view) => {
