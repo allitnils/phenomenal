@@ -1,0 +1,5 @@
+node_modules/
+phenomenal.db
+*.db
+.env
+.env.local
